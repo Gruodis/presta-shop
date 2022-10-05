@@ -16,6 +16,58 @@ pull requestupdate project (patikkrinam ar nera pasikeitimu brance)jeigu commit
 <hr/>
 
 # PrestaPro Projektų paleidimas
+
+<ul>
+ <li>Naujam projekto paleidimui, <br />
+  jeigu nėra instaliuota docker-composer(patikrinimui docker -v docker-composer -v)</li>
+</ul>
+
+```bash
+sudo apt-get install docker-compose
+```
+
+<ul>
+ <li>Naujam projekto paleidimui:</li>
+</ul>
+* Run:
+
+```bash 
+cp app/config/parameters.php.dist app/config/parameters.php
+```
+
+```bash
+sudo docker-compose up --build
+```
+<ul>
+ <li>Pakartotiniam projekto paleidimui:</li>
+</ul>
+
+```bash
+sudo docker-compose up
+```
+
+<ul>
+ <li>Jau startuoto projekto atnaujinimui as folows:</li>
+</ul>
+
+```bash
+sudo docker-compose down
+```
+- [ ] - Atsinaujiname cranch'ą
+
+```bash
+sudo docker-compose up --build -d --force-recreate
+```
+
+<ul>
+ <li>Jeigu gauname permission error'ą:</li>
+</ul>
+```bash
+sudo chmod 666 /var/run/docker.sockdocker-compose up
+```
+<ul>
+ <li>Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b></li>
+</ul>
 ### Marabika:
 #### Jeigu bandant paleist dockeri meta:
 ```bash
@@ -64,38 +116,6 @@ EXPOSE 80
 
 
 ### Marabika:
-<ul>
- <li>Naujam projekto paleidimui, jeigu nėra instaliuota docker-composer(patikrinimui docker -v docker-composer -v)</li>
-</ul>
-
-```bash
-sudo apt-get install docker-compose
-```
-
-<ul>
- <li>Naujam projekto paleidimui:</li>
-</ul>
-
-```bash
-sudo docker-compose up --build
-```
-<ul>
- <li>Pakartotiniam projekto paleidimui:</li>
-</ul>
-
-```bash
-sudo docker-compose up
-```
-
-<ul>
- <li>Jeigu gauname permission error'ą:</li>
-</ul>
-```bash
-sudo chmod 666 /var/run/docker.sockdocker-compose up
-```
-<ul>
- <li>Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b></li>
-</ul>
 
 Links:  https://marabika-fe.5z.lt/category.html https://marabika-fe.5z.lt/blog.html
 
