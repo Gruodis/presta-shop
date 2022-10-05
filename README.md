@@ -127,5 +127,5 @@ sudo dpkg -i activecollab-timer.deb
 ```
 #### After app launches:
 
---set to self hosted
+--set to self hosted \n
 --tasks.onesoft.io & credentials
