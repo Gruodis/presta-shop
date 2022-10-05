@@ -1,4 +1,6 @@
+<p align="center">
 # Good to know
+ </p>
 
 ## How to commit:
 Commit local project to github repo:
