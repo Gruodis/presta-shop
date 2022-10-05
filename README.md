@@ -56,8 +56,8 @@ EXPOSE 80
 #### Jiegu neatidaro nuoroų:
 <ol>
  <li>Einame į PrestaShop admin,</li>
- <li>Konfiguruoti -> Parduotuves nustatymai -> Duomenu srautas ir SEO,</li>
- <li>Pasirenkame nustatymą: URL/Draugiškas URL == ON</li>
+ <li>Konfiguruoti -> Parduotuves nustatymai -> Duomenu srautas ir SEO, (Shop Parameters -> Traffic & SEO -> SEO & URLs)</li>
+ <li>Pasirenkame nustatymą: URL/Draugiškas URL == TAIP (Choose Set up URLs: Friendly URL == YES</li>
  <li>Išsaugome pakeitimus.</li>
 </ol>
 
