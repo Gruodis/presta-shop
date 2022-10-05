@@ -98,17 +98,19 @@ https://codepen.io/devam-soni/pen/PoqaKWm
 ### AlpineJS lessons: 
 https://laracasts.com/series/alpine-essentials/episodes/1
 
-## APPLE KEYBOARD ON LINUX
+### APPLE KEYBOARD ON LINUX
 Probably because you accidentally press F6, which is labeled Num Lock. When Num Lock is on, the only keys active are the numeric keypad keys marked by numbers on the lower right corners.
 
 Docker compose in phpterminal:https://docs.docker.com/desktop/install/ubuntu/
 
 ### PhpStorm & Tailwind autocomplete & Commands available in PhpStorm terminal
 Download and unpack PhpStorm v2022.2.1 package to /opt location and running this installation should make commands available in the terminal.
+
 <ol>
  <li>Create file in: /usr/share/applications/phpstorm.desktop</li>
  <li>inside phpstorm.desktop file:</li>
- </ol>
+</ol>
+ 
 ```bash
 [Desktop Entry]
 Version=2022.2.1
@@ -120,6 +122,7 @@ Terminal=false
 Type=Application
 Categories=Utility;Application;
 ```
+
 ### PppStorm terminal change:
 Settings > Tools > Terminal > Shell path: /bin/bash -i
 
