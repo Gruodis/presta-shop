@@ -58,17 +58,18 @@ sudo docker-compose down
 ```bash
 sudo docker-compose up --build -d --force-recreate
 ```
-
-<ul>
- <li>Jeigu gauname permission error'ą:</li>
-</ul>
-```bash
-sudo chmod 666 /var/run/docker.sockdocker-compose up
-```
 <ul>
  <li>Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b></li>
 </ul>
-### Marabika:
+### Error'ai ir sprendimai:
+#### Jeigu bandant paleist dockeri meta:
+
+
+#### Jeigu gauname ***permission*** error'ą:
+```bash
+sudo chmod 666 /var/run/docker.sockdocker-compose up
+```
+
 #### Jeigu bandant paleist dockeri meta:
 ```bash
 https://packages.sury.org/php/apt.gpg | apt-key add - && apt-get update -qq' returned a non-zero code: 100ERROR: Service 'prestashop' failed to build : Build failed
@@ -113,9 +114,6 @@ EXPOSE 80
  <li>Išsaugome pakeitimus.</li>
 </ol>
 
-
-
-### Marabika:
 
 Links:  https://marabika-fe.5z.lt/category.html https://marabika-fe.5z.lt/blog.html
 
