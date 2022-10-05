@@ -59,6 +59,7 @@ EXPOSE 80
 <ul>
  <li>Naujam projekto paleidimui</li>
 </ul>
+
 ```bash
 sudo apt-get install docker-compose
 ```
@@ -66,6 +67,7 @@ sudo apt-get install docker-compose
 <ul>
  <li>Naujam/pakartotiniam projekto paleidimui:</li>
 </ul>
+
 ```bash
 sudo chmod 666 /var/run/docker.sockdocker-compose up
 ```
