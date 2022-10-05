@@ -1,6 +1,6 @@
-<p align="center">
+<h1 align="center">
 # Good to know
- </p>
+ </h1>
 
 ## How to commit:
 Commit local project to github repo:
