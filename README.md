@@ -5,8 +5,6 @@ http://localhost:5000/plauku-dazai/1473-1409-loreal-professionnel-inoa-plauku-da
 
 http://localhost:5000/admin654fhpgdg/index.php/sell/catalog/products/1473?_token=cl92kW9BDp57w7HNYwMvNb0XM_XSJ13Vtc7RQlv7ydc#tab-step3
 
-## PppStorm terminal change:
-Settings > Tools > Terminal > Shell path: /bin/bash -i
 
 ## How to commit:
 Commit local project to github repo:
@@ -15,7 +13,7 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 
 pull requestupdate project (patikkrinam ar nera pasikeitimu brance)jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
 ```
-
+# PrestaPro Projektų paleidimas
 ## Marabika:
 ### Jeigu bandant paleist dockeri meta:
 ```bash
@@ -71,8 +69,9 @@ sudo chmod 666 /var/run/docker.sockdocker-compose up
 --naujai ir pakartotinai paleidus projektą ištrinti admin install 
 
 Links:  https://marabika-fe.5z.lt/category.html https://marabika-fe.5z.lt/blog.html
------------------------------------------------------------------------------------
-## Danija
+
+
+### Danija
 SEO  -> disable friendly url
 
 ```bash
@@ -82,7 +81,7 @@ if (!defined('_PS_MODE_DEV_')) {
 define('_PS_DISPLAY_COMPATIBILITY_WARNING_', false);
 if (_PS_MODE_DEV_ === false) {
 ```
-## Fix missing images, open phpMyAdmin -> prestashop table -> sql:
+### Fix missing images, open phpMyAdmin -> prestashop table -> sql:
 ```bash
 TRUNCATE prestashop.ps_image;
 TRUNCATE prestashop.ps_image_lang;
@@ -91,7 +90,7 @@ TRUNCATE prestashop.ps_image_shop;
 
 https://codepen.io/devam-soni/pen/PoqaKWm
 
-# AlpineJS lessons: 
+### AlpineJS lessons: 
 https://laracasts.com/series/alpine-essentials/episodes/1
 
 # APPLE KEYBOARD ON LINUX
@@ -115,17 +114,18 @@ Terminal=false
 Type=Application
 Categories=Utility;Application;
 ```
+### PppStorm terminal change:
+Settings > Tools > Terminal > Shell path: /bin/bash -i
 
-# Active Collab Timer linux
+### Active Collab Timer linux
 ```bash
 sudo apt-get install libgconf-2-4
 ```
--- Then install: 
+#### Then install: 
 ```bash
 sudo dpkg -i activecollab-timer.deb
 ```
-After app launches:
+#### After app launches:
 
---  set to self hosted
-
--- tasks.onesoft.io & credentials
+--set to self hosted
+--tasks.onesoft.io & credentials
