@@ -80,7 +80,7 @@ sudo apt-get install docker-compose
 sudo docker-compose up --build
 ```
 <ul>
- <li>Naujam/pakartotiniam projekto paleidimui:</li>
+ <li>Pakartotiniam projekto paleidimui:</li>
 </ul>
 
 ```bash
