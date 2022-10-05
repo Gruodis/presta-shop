@@ -65,7 +65,7 @@ EXPOSE 80
 
 ### Marabika:
 <ul>
- <li>Naujam projekto paleidimui</li>
+ <li>Naujam projekto paleidimui, jeigu nėra instaliuota docker-composer(patikrinimui docker -v docker-composer -v)</li>
 </ul>
 
 ```bash
@@ -73,14 +73,25 @@ sudo apt-get install docker-compose
 ```
 
 <ul>
+ <li>Naujam projekto paleidimui:</li>
+</ul>
+```bash
+sudo docker-compose up --build
+```
+<ul>
  <li>Naujam/pakartotiniam projekto paleidimui:</li>
 </ul>
-
+```bash
+sudo docker-compose up
+```
+<ul>
+ <li>Jeigu gauname permission error'ą:</li>
+</ul>
 ```bash
 sudo chmod 666 /var/run/docker.sockdocker-compose up
 ```
 <ul>
- <li>Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir install</li>
+ <li>Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b></li>
 </ul>
 
 Links:  https://marabika-fe.5z.lt/category.html https://marabika-fe.5z.lt/blog.html
