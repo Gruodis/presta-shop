@@ -9,6 +9,8 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 ```
 pull requestupdate project (patikkrinam ar nera pasikeitimu brance)jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
 
+<hr/>
+
 # PrestaPro Projektų paleidimas
 ### Marabika:
 #### Jeigu bandant paleist dockeri meta:
@@ -96,6 +98,8 @@ TRUNCATE prestashop.ps_image;
 TRUNCATE prestashop.ps_image_lang;
 TRUNCATE prestashop.ps_image_shop;
 ```
+<hr/>
+
 
 https://codepen.io/devam-soni/pen/PoqaKWm
 
