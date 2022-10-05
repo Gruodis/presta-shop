@@ -105,12 +105,14 @@ Probably because you accidentally press F6, which is labeled Num Lock. When Num 
 
 Docker compose in phpterminal:https://docs.docker.com/desktop/install/ubuntu/
 
-### PhpStorm & Tailwind autocomplete & Commands available in PhpStorm terminal
+### PhpStorm
+#### PhpStorm & Tailwind autocomplete & Commands available in PhpStorm terminal
 Download and unpack PhpStorm v2022.2.1 package to /opt location and running this installation should make commands available in the terminal.
 
+#### Create PhpStorm shortcut in OS Applications
 <ol>
  <li>Create file in: /usr/share/applications/phpstorm.desktop</li>
- <li>inside phpstorm.desktop file:</li>
+ <li>Inside phpstorm.desktop file:</li>
 </ol>
  
 ```bash
