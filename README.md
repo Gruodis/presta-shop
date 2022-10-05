@@ -125,5 +125,7 @@ sudo apt-get install libgconf-2-4
 sudo dpkg -i activecollab-timer.deb
 ```
 After app launches:
+
 --  set to self hosted
+
 -- tasks.onesoft.io & credentials
