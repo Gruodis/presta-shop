@@ -70,7 +70,7 @@ sudo apt-get install docker-compose
 sudo chmod 666 /var/run/docker.sockdocker-compose up
 ```
 <ul>
- <li>Naujai ir pakartotinai paleidus projektą ištrinti admin ir install</li>
+ <li>Naujai ir pakartotinai paleidus projektą ištrinti <strong>admin</srtong> ir install</li>
 </ul>
 
 Links:  https://marabika-fe.5z.lt/category.html https://marabika-fe.5z.lt/blog.html
@@ -123,7 +123,7 @@ Type=Application
 Categories=Utility;Application;
 ```
 
-### PppStorm terminal change:
+### PhpStorm terminal change:
 Settings > Tools > Terminal > Shell path: /bin/bash -i
 
 ### Active Collab Timer linux
