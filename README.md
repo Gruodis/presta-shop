@@ -1,10 +1,4 @@
-# follow
-Follow these crumbs
-
-http://localhost:5000/plauku-dazai/1473-1409-loreal-professionnel-inoa-plauku-dazai-60g.html#/1197-loreal_professionnel_inoa_plauku_dazai_60g-inoa_clear
-
-http://localhost:5000/admin654fhpgdg/index.php/sell/catalog/products/1473?_token=cl92kW9BDp57w7HNYwMvNb0XM_XSJ13Vtc7RQlv7ydc#tab-step3
-
+# Good to know
 
 ## How to commit:
 Commit local project to github repo:
@@ -19,14 +13,14 @@ pull requestupdate project (patikkrinam ar nera pasikeitimu brance)jeigu commit
 ```bash
 https://packages.sury.org/php/apt.gpg | apt-key add - && apt-get update -qq' returned a non-zero code: 100ERROR: Service 'prestashop' failed to build : Build failed
 ```
-Vaistai: iš docker/Dockerfile.prestashop ištrinam:
+#### Vaistai: iš docker/Dockerfile.prestashop ištrinam:
 ```bash
 RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /etc/apt/sources.list.d/php.list \
     && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
     && apt-get update -qq
 ```
 
-Failas turėtų atrodyt taip (galima tiesiog copy paste):
+#### Failas turėtų atrodyt taip (galima tiesiog copy paste):
 ```bash
 FROM prestashop/prestashop:1.7-7.2-apache
 
@@ -50,8 +44,8 @@ EXPOSE 443
 EXPOSE 80
 
 ```
-------------------------------/////////////////////////////////////////////
-## Jiegu neatidaro nuoroų:
+
+### Jiegu neatidaro nuoroų:
 Einame į PrestaShop admin >
 Konfiguruoti > Parduotuves nustatymai > Duomenu srautas ir SEO > 
 Pasirinkti nustatymą: URL/Draugiškas URL == ON > Save
@@ -99,10 +93,10 @@ Probably because you accidentally press F6, which is labeled Num Lock. When Num 
 Docker compose in phpterminal:https://docs.docker.com/desktop/install/ubuntu/
 
 ### PhpStorm & Tailwind autocomplete & Commands available in PhpStorm terminal
-Download and unpack PhpStorm v2022.2.1 full package to /opt location and running this installation makes commands available in the terminal?
+Download and unpack PhpStorm v2022.2.1 package to /opt location and running this installation should make commands available in the terminal.
 
--- Create file in: /usr/share/applications/phpstorm.desktop
--- inside phpstorm.desktop file:
+-- Create file in: /usr/share/applications/phpstorm.desktop <br />
+-- inside phpstorm.desktop file: <br />
 ```bash
 [Desktop Entry]
 Version=2022.2.1
@@ -127,5 +121,5 @@ sudo dpkg -i activecollab-timer.deb
 ```
 #### After app launches:
 
---set to self hosted \n
+--set to self hosted  <br />
 --tasks.onesoft.io & credentials
