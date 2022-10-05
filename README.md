@@ -75,15 +75,18 @@ sudo apt-get install docker-compose
 <ul>
  <li>Naujam projekto paleidimui:</li>
 </ul>
+
 ```bash
 sudo docker-compose up --build
 ```
 <ul>
  <li>Naujam/pakartotiniam projekto paleidimui:</li>
 </ul>
+
 ```bash
 sudo docker-compose up
 ```
+
 <ul>
  <li>Jeigu gauname permission error'ą:</li>
 </ul>
