@@ -67,7 +67,7 @@ sudo docker-compose up --build -d --force-recreate
 
 #### Jeigu gauname ***permission*** error'ą:
 ```bash
-sudo chmod 666 /var/run/docker.sockdocker-compose up
+sudo chmod 666 /var/run/docker.sock
 ```
 
 #### Jeigu bandant paleist dockeri meta:
