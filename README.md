@@ -8,8 +8,8 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 pull requestupdate project (patikkrinam ar nera pasikeitimu brance)jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
 
 # PrestaPro Projektų paleidimas
-## Marabika:
-### Jeigu bandant paleist dockeri meta:
+### Marabika:
+#### Jeigu bandant paleist dockeri meta:
 ```bash
 https://packages.sury.org/php/apt.gpg | apt-key add - && apt-get update -qq' returned a non-zero code: 100ERROR: Service 'prestashop' failed to build : Build failed
 ```
@@ -45,28 +45,33 @@ EXPOSE 80
 
 ```
 
-### Jiegu neatidaro nuoroų:
+#### Jiegu neatidaro nuoroų:
+<ol>
+ <li>Einame į PrestaShop admin,</li>
+ <li>Konfiguruoti -> Parduotuves nustatymai -> Duomenu srautas ir SEO,</li>
+ <li>Pasirenkame nustatymą: URL/Draugiškas URL == ON</li>
+ <li>Išsaugome pakeitimus.</li>
+</ol>
+
+
+
+### Marabika:
 <ul>
- <li>Einame į PrestaShop admin -></li>
- <li>Konfiguruoti -> Parduotuves nustatymai -> Duomenu srautas ir SEO -></li>
- <li>Pasirinkti nustatymą: URL/Draugiškas URL == ON</li>
- <li>Išsaugome pakeitimus</li>
+ <li>Naujam projekto paleidimui</li>
 </ul>
-Einame į PrestaShop admin ->
-Konfiguruoti -> Parduotuves nustatymai -> Duomenu srautas ir SEO -> <br />
-Pasirinkti nustatymą: URL/Draugiškas URL == ON -> Save
-
-
-## Marabika:
---naujam projekto paleidimui
 ```bash
 sudo apt-get install docker-compose
 ```
---naujam/pakartotiniam projekto paleidimui:
+
+<ul>
+ <li>Naujam/pakartotiniam projekto paleidimui:</li>
+</ul>
 ```bash
 sudo chmod 666 /var/run/docker.sockdocker-compose up
 ```
---naujai ir pakartotinai paleidus projektą ištrinti admin install 
+<ul>
+ <li>Naujai ir pakartotinai paleidus projektą ištrinti **admin** ir **install**</li>
+</ul>
 
 Links:  https://marabika-fe.5z.lt/category.html https://marabika-fe.5z.lt/blog.html
 
@@ -100,9 +105,10 @@ Docker compose in phpterminal:https://docs.docker.com/desktop/install/ubuntu/
 
 ### PhpStorm & Tailwind autocomplete & Commands available in PhpStorm terminal
 Download and unpack PhpStorm v2022.2.1 package to /opt location and running this installation should make commands available in the terminal.
-
--- Create file in: /usr/share/applications/phpstorm.desktop <br />
--- inside phpstorm.desktop file: <br />
+<ol>
+ <li>Create file in: /usr/share/applications/phpstorm.desktop</li>
+ <li>inside phpstorm.desktop file:</li>
+ </ol>
 ```bash
 [Desktop Entry]
 Version=2022.2.1
