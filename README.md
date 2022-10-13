@@ -53,7 +53,7 @@ sudo docker-compose up
 ```bash
 sudo docker-compose down
 ```
-- [ ] - Atsinaujiname cranch'ą
+- [ ] - Atsinaujiname branch'ą, tuomet:
 
 ```bash
 sudo docker-compose up --build -d --force-recreate
