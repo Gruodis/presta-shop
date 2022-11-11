@@ -14,7 +14,8 @@ pull requestupdate project (patikkrinam ar nera pasikeitimu brance)jeigu commit
 
 
 <hr/>
-<p align="center"><img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Prestashop.svg/1194px-Prestashop.svg.png"></p>
+<p align="center"><img width="300" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Prestashop.svg/1194px-Prestashop.svg.png"></p>
+
 # PrestaPro Projektų paleidimas
 
 <ul>
