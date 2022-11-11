@@ -39,8 +39,19 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
   ```
 
 - ```bash
-  sudo docker-compose up --build
+  sudo docker-compose up --build --force-recreate
   ```
+- :red_circle: Jeigu bandant paleist dockeri meta:
+  - ```bash
+    https://packages.sury.org/php/apt.gpg | apt-key add - && apt-get update -qq' returned a non-zero code: 100ERROR: Service 'prestashop' failed to build : Build failed
+    ```
+  -  Vaistai: iš **docker/Dockerfile.prestashop** ištrinam:
+  - ```bash
+    RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /etc/apt/sources.list.d/php.list \
+        && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
+        && apt-get update -qq
+    ```
+
 ## Pakartotiniam projekto paleidimui:
 
 - ```bash
@@ -59,50 +70,37 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 
 ### Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b>
 
-## Error'ai ir sprendimai:
-#### Jeigu bandant paleist dockeri meta:
+# :interrobang: Error'ai ir sprendimai:
+
+- :red_circle: Jeigu bandant paleist dockeri gauname ***permission*** error'ą:
+- ```bash
+  sudo chmod 666 /var/run/docker.sock
+  ```
+
+-  Failas turėtų atrodyt taip (galima tiesiog copy paste):
+- ```bash
+  FROM prestashop/prestashop:1.7-7.2-apache // šitos eilutės nenaudojame nebent būtina
+
+  RUN apt-get update -qq \
+      && DEBIAN_FRONTEND=noninteractive apt-get install -y git \
+      mariadb-client wget curl \
+      ca-certificates lsb-release apt-transport-https gnupg bsdmainutils
+
+  #Adding package
+  RUN pecl install zip
+
+  RUN a2enmod ssl
+
+  ADD ./docker/ssl /etc/apache2/ssl
+  ADD ./docker/php/php.ini /usr/local/etc/php/php.ini
+
+  ADD ./docker/site.conf /etc/apache2/sites-available/000-default.conf
 
 
-#### Jeigu gauname ***permission*** error'ą:
-```bash
-sudo chmod 666 /var/run/docker.sock
-```
+  EXPOSE 443
+  EXPOSE 80
 
-#### Jeigu bandant paleist dockeri meta:
-```bash
-https://packages.sury.org/php/apt.gpg | apt-key add - && apt-get update -qq' returned a non-zero code: 100ERROR: Service 'prestashop' failed to build : Build failed
-```
-#### Vaistai: iš docker/Dockerfile.prestashop ištrinam:
-```bash
-RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /etc/apt/sources.list.d/php.list \
-    && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
-    && apt-get update -qq
-```
-
-#### Failas turėtų atrodyt taip (galima tiesiog copy paste):
-```bash
-FROM prestashop/prestashop:1.7-7.2-apache
-
-RUN apt-get update -qq \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y git \
-    mariadb-client wget curl \
-    ca-certificates lsb-release apt-transport-https gnupg bsdmainutils
-
-#Adding package
-RUN pecl install zip
-
-RUN a2enmod ssl
-
-ADD ./docker/ssl /etc/apache2/ssl
-ADD ./docker/php/php.ini /usr/local/etc/php/php.ini
-
-ADD ./docker/site.conf /etc/apache2/sites-available/000-default.conf
-
-
-EXPOSE 443
-EXPOSE 80
-
-```
+  ```
 
 #### Jiegu neatidaro nuoroų:
 <ol>
