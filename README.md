@@ -4,12 +4,15 @@
 # Good to know
  </h1>
 
-## How to commit:
+## Git:
 Commit local project to github repo:
+
 ```bash
 git initgit add .    (add all files to stage for later commit)git commit -m "Message to describe commit."
 ```
-pull requestupdate project (patikkrinam ar nera pasikeitimu brance)jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
+- pull request update project - patikriname ar nėra branch'e pasikeitimų
+- jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
+
 - [ ] - Merge your branch into **develop** (No Pull request needed)
 - [ ] - Create Pull request into **master** branch
 - [ ] - **TEST your feature in staging server**
