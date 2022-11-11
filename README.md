@@ -55,7 +55,7 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
   - ```bash
     PHP Fatal error:  Uncaught  --> Smarty: unable to write file /var/www/html/cache/smarty/compile/37/65/91/wrt636e46e56f3193_90422010 <-- \n  thrown in /var/www/html/tools/smarty/sysplugins/smarty_internal_write_file.php on line 46
     ```
-  -  :heavy_check_mark: einame į projekto dir **cache/** ir patikriname folderio **smarty** permission:
+  -  :heavy_check_mark: einame į projekto dir **"../cache/"** ir patikriname folderio **"../smarty"** permission:
     
     
 ## Pakartotiniam projekto paleidimui:
