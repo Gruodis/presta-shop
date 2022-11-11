@@ -1,4 +1,4 @@
-<p align="center"><img width="150" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"></p>
+<p align="center"><img width="150" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png"></p>
 
 <h1 align="center">
 # Good to know
