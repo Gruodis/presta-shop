@@ -5,17 +5,17 @@
  </h1>
 
 ## Git:
-Commit local project to github repo:
+-  Commit local project to github repo:
 
-```bash
-git initgit add .    (add all files to stage for later commit)git commit -m "Message to describe commit."
-```
-- pull request update project - patikriname ar nėra branch'e pasikeitimų
-- jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
+  - ```bash
+    git initgit add .    (add all files to stage for later commit)git commit -m "Message to describe commit."
+    ```
+-  pull request update project - patikriname ar nėra branch'e pasikeitimų
+-  jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
 
-- [ ] - Merge your branch into **develop** (No Pull request needed)
-- [ ] - Create Pull request into **master** branch
-- [ ] - **TEST your feature in staging server**
+-  Merge your branch into **develop** (No Pull request needed)
+-  Create Pull request into **master** branch
+-  **TEST your feature in staging server**
 
 
 <hr/>
@@ -24,14 +24,13 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 # PrestaPro Projektų paleidimas
 
 ## Naujam projekto paleidimui
+
 -  jeigu nėra instaliuota docker-composer, patikrinimui ```docker -v docker-composer -v```
 
 - ```bash
   sudo apt-get install docker-compose
   ```
-  
-## Naujam projekto paleidimui:
-
+ 
 * Run:
 
 - ```bash 
