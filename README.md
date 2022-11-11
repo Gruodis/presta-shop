@@ -23,14 +23,13 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 
 # PrestaPro Projektų paleidimas
 
-<ul>
- <li>Naujam projekto paleidimui, <br />
-  jeigu nėra instaliuota docker-composer(patikrinimui docker -v docker-composer -v)</li>
-</ul>
+## Naujam projekto paleidimui
+-  jeigu nėra instaliuota docker-composer, patikrinimui ```docker -v docker-composer -v```
 
-```bash
-sudo apt-get install docker-compose
-```
+- ```bash
+  sudo apt-get install docker-compose
+  ```
+  
 ## Naujam projekto paleidimui:
 
 * Run:
