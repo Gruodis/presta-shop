@@ -56,7 +56,8 @@
     ```
   -  :heavy_check_mark: einame į projekto dir **"../cache/"** ir patikriname folderio **"../smarty"** permission:
     
-    
+
+
 ## Pakartotiniam projekto paleidimui:
 
 - ```bash
@@ -72,6 +73,8 @@
 - ```bash
   sudo docker-compose up --build -d --force-recreate
   ```
+
+
 
 ### Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b>
 
