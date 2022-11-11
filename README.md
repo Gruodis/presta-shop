@@ -31,43 +31,36 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 ```bash
 sudo apt-get install docker-compose
 ```
+## Naujam projekto paleidimui:
 
-<ul>
- <li>Naujam projekto paleidimui:</li>
-</ul>
 * Run:
 
-```bash 
-cp app/config/parameters.php.dist app/config/parameters.php
-```
+- ```bash 
+  cp app/config/parameters.php.dist app/config/parameters.php
+  ```
 
-```bash
-sudo docker-compose up --build
-```
-<ul>
- <li>Pakartotiniam projekto paleidimui:</li>
-</ul>
+- ```bash
+  sudo docker-compose up --build
+  ```
+## Pakartotiniam projekto paleidimui:
 
-```bash
-sudo docker-compose up
-```
+- ```bash
+  sudo docker-compose up
+  ```
+## Jau startuoto projekto atnaujinimui as folows:
 
-<ul>
- <li>Jau startuoto projekto atnaujinimui as folows:</li>
-</ul>
+- ```bash
+  sudo docker-compose down
+  ```
+- Atsinaujiname branch'ą, tuomet:
 
-```bash
-sudo docker-compose down
-```
-- [ ] - Atsinaujiname branch'ą, tuomet:
+- ```bash
+  sudo docker-compose up --build -d --force-recreate
+  ```
 
-```bash
-sudo docker-compose up --build -d --force-recreate
-```
-<ul>
- <li>Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b></li>
-</ul>
-### Error'ai ir sprendimai:
+### Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b>
+
+## Error'ai ir sprendimai:
 #### Jeigu bandant paleist dockeri meta:
 
 
