@@ -41,17 +41,23 @@ git initgit add .    (add all files to stage for later commit)git commit -m "M
 - ```bash
   sudo docker-compose up --build --force-recreate
   ```
-- :red_circle: Jeigu bandant paleist dockeri meta:
+- :interrobang: Jeigu bandant paleist dockeri meta:
   - ```bash
     https://packages.sury.org/php/apt.gpg | apt-key add - && apt-get update -qq' returned a non-zero code: 100ERROR: Service 'prestashop' failed to build : Build failed
     ```
-  -  Vaistai: iš **docker/Dockerfile.prestashop** ištrinam:
+  -  :heavy_check_mark: iš **docker/Dockerfile.prestashop** ištrinam:
   - ```bash
     RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /etc/apt/sources.list.d/php.list \
         && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
         && apt-get update -qq
     ```
-
+- :interrobang: Jeigu bandant paleist dockeri meta:
+  - ```bash
+    PHP Fatal error:  Uncaught  --> Smarty: unable to write file /var/www/html/cache/smarty/compile/37/65/91/wrt636e46e56f3193_90422010 <-- \n  thrown in /var/www/html/tools/smarty/sysplugins/smarty_internal_write_file.php on line 46
+    ```
+  -  :heavy_check_mark: einame į projekto dir **cache/** ir patikriname folderio **smarty** permission:
+    
+    
 ## Pakartotiniam projekto paleidimui:
 
 - ```bash
