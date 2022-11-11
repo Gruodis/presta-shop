@@ -7,9 +7,9 @@
 ## Git:
 -  Commit local project to github repo:
 
-  - ```bash
-    git initgit add .    (add all files to stage for later commit)git commit -m "Message to describe commit."
-    ```
+   - ```bash
+     git initgit add .    (add all files to stage for later commit)git commit -m "Message to describe commit."
+     ```
 -  pull request update project - patikriname ar nėra branch'e pasikeitimų
 -  jeigu commit metu failas neisikelia i serveri ir raudonuoja, reikia Git -> Add (įkeliam failą į stage).
 
