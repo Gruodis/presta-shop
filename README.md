@@ -1,3 +1,7 @@
+<p align="center"><img width="300" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="
+https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png
+ "></p>
+
 <h1 align="center">
 # Good to know
  </h1>
