@@ -1,6 +1,6 @@
 <p align="center"><img width="150" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Prestashop.svg/1194px-Prestashop.svg.png"></p>
 
-# PrestaPro Projektų paleidimas
+<h1 align="center"> PrestaPro Projektų paleidimas </h1>
 
 ## Naujam projekto paleidimui
 
@@ -124,53 +124,12 @@ TRUNCATE prestashop.ps_image_shop;
 
 https://codepen.io/devam-soni/pen/PoqaKWm
 
-### AlpineJS lessons: 
-https://laracasts.com/series/alpine-essentials/episodes/1
 
 ### APPLE KEYBOARD ON LINUX
 Probably because you accidentally press F6, which is labeled Num Lock. When Num Lock is on, the only keys active are the numeric keypad keys marked by numbers on the lower right corners.
 
 Docker compose in phpterminal:https://docs.docker.com/desktop/install/ubuntu/
 
-## PhpStorm
-### PhpStorm & Tailwind autocomplete & Commands available in PhpStorm terminal
-Download and unpack PhpStorm v2022.2.1 package to /opt location and running this installation should make commands available in the terminal.
-
-#### Create PhpStorm shortcut in OS Applications
-<ol>
- <li>Create file in: /usr/share/applications/phpstorm.desktop</li>
- <li>Inside phpstorm.desktop file:</li>
-</ol>
- 
-```bash
-[Desktop Entry]
-Version=2022.2.1
-Name=PhpStorm-Tailwind
-Comment=Phpstorm
-Exec=/opt/PhpStorm-222.3739.61/bin/phpstorm.sh
-Icon=/opt/PhpStorm-222.3739.61/bin/phpstorm.svg
-Terminal=false
-Type=Application
-Categories=Utility;Application;
-```
-
-### PhpStorm terminal change:
-Settings > Tools > Terminal > Shell path: /bin/bash -i
-
-## Active Collab Timer linux
-```bash
-sudo apt-get install libgconf-2-4
-```
-#### Then install: 
-```bash
-sudo dpkg -i activecollab-timer.deb
-```
-#### After app launches:
-<ol>
- <li>Set to: self hosted</li>
- <li>tasks.onesoft.io</li>
- <li>enter credentials</li>
-<ol>
 
 ## To Do
 - [ ] - https://www.freecodecamp.org/news/create-a-portfolio-website-using-html-css-javascript/
