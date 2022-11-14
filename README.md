@@ -48,7 +48,34 @@ sudo systemctl disable containerd.service
         && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
         && apt-get update -qq
     ```
-- :interrobang: Jeigu bandant paleist dockeri meta:
+    
+  -  Failas turėtų atrodyt taip (galima tiesiog copy paste):
+     
+    ```bash
+    FROM prestashop/prestashop:1.7-7.2-apache // šitos eilutės nenaudojame nebent būtina
+
+    RUN apt-get update -qq \
+        && DEBIAN_FRONTEND=noninteractive apt-get install -y git \
+        mariadb-client wget curl \
+        ca-certificates lsb-release apt-transport-https gnupg bsdmainutils
+
+    #Adding package
+    RUN pecl install zip
+
+    RUN a2enmod ssl
+
+    ADD ./docker/ssl /etc/apache2/ssl
+    ADD ./docker/php/php.ini /usr/local/etc/php/php.ini
+
+    ADD ./docker/site.conf /etc/apache2/sites-available/000-default.conf
+
+
+    EXPOSE 443
+    EXPOSE 80
+
+    ```
+  
+- :interrobang: Jeigu bandant paleist docker meta:
   - ```bash
     PHP Fatal error:  Uncaught  --> Smarty: unable to write file /var/www/html/cache/smarty/compile/37/65/91/wrt636e46e56f3193_90422010 <-- \n  thrown in /var/www/html/tools/smarty/sysplugins/smarty_internal_write_file.php on line 46
     ```
@@ -65,12 +92,12 @@ sudo systemctl disable containerd.service
   ```
 ## Jau startuoto projekto atnaujinimui as folows:
 
-- ```bash
+  ```bash
   sudo docker-compose down
   ```
 - Atsinaujiname branch'ą, tuomet:
 
-- ```bash
+  ```bash
   sudo docker-compose up --build -d --force-recreate
   ```
 
@@ -83,40 +110,17 @@ sudo systemctl disable containerd.service
 - :red_circle: Jeigu bandant paleist dockeri gauname ***permission*** error'ą:
 
 - First try this command and reboot system:
-- ```bash
+  ```bash
   sudo gpasswd -a $USER docker
   newgrp docker
   ```
 - Or You can run docker with ``sudo docker-compose up`` or run this command:
-- ```bash
+  ```bash
   sudo chmod 666 /var/run/docker.sock
   ```
   and then ``docker-compose up``
 
--  Failas turėtų atrodyt taip (galima tiesiog copy paste):
-- ```bash
-  FROM prestashop/prestashop:1.7-7.2-apache // šitos eilutės nenaudojame nebent būtina
 
-  RUN apt-get update -qq \
-      && DEBIAN_FRONTEND=noninteractive apt-get install -y git \
-      mariadb-client wget curl \
-      ca-certificates lsb-release apt-transport-https gnupg bsdmainutils
-
-  #Adding package
-  RUN pecl install zip
-
-  RUN a2enmod ssl
-
-  ADD ./docker/ssl /etc/apache2/ssl
-  ADD ./docker/php/php.ini /usr/local/etc/php/php.ini
-
-  ADD ./docker/site.conf /etc/apache2/sites-available/000-default.conf
-
-
-  EXPOSE 443
-  EXPOSE 80
-
-  ```
 
 #### Jiegu neatidaro nuoroų:
 <ol>
