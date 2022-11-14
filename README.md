@@ -1,6 +1,24 @@
 <p align="center"><img width="150" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Prestashop.svg/1194px-Prestashop.svg.png"></p>
 
 <h1 align="center"> PrestaPro Projektų paleidimas </h1>
+<br/>
+<br/>
+#### Docker FYI:
+
+
+Configure Docker to start on boot with systemd
+```bash
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
+To stop this behavior, use disable instead.
+```bash
+sudo systemctl disable docker.service
+sudo systemctl disable containerd.service
+```
+
+<br/>
+<br/>
 
 ## Naujam projekto paleidimui
 
