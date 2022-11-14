@@ -39,17 +39,17 @@ sudo systemctl disable containerd.service
   sudo docker-compose up --build --force-recreate
   ```
 - :interrobang: Jeigu bandant paleist dockeri meta:
-  - ```bash
+    ```bash
     https://packages.sury.org/php/apt.gpg | apt-key add - && apt-get update -qq' returned a non-zero code: 100ERROR: Service 'prestashop' failed to build : Build failed
     ```
-  -  :heavy_check_mark: iš **docker/Dockerfile.prestashop** ištrinam:
-  - ```bash
+-  :heavy_check_mark: iš **docker/Dockerfile.prestashop** ištrinam:
+    ```bash
     RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee -a /etc/apt/sources.list.d/php.list \
         && curl https://packages.sury.org/php/apt.gpg | apt-key add - \
         && apt-get update -qq
     ```
     
-  -  Failas turėtų atrodyt taip (galima tiesiog copy paste):
+-  Failas turėtų atrodyt taip (galima tiesiog copy paste):
      
     ```bash
     FROM prestashop/prestashop:1.7-7.2-apache // šitos eilutės nenaudojame nebent būtina
