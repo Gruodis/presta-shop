@@ -81,9 +81,17 @@ sudo systemctl disable containerd.service
 # :interrobang: Error'ai ir sprendimai:
 
 - :red_circle: Jeigu bandant paleist dockeri gauname ***permission*** error'ą:
+
+- First try this command and reboot system:
+- ```bash
+  sudo gpasswd -a $USER docker
+  newgrp docker
+  ```
+- Or You can run docker with ``sudo docker-compose up`` or run this command:
 - ```bash
   sudo chmod 666 /var/run/docker.sock
   ```
+  and then ``docker-compose up``
 
 -  Failas turėtų atrodyt taip (galima tiesiog copy paste):
 - ```bash
