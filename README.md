@@ -14,7 +14,6 @@
   sudo apt-get install docker-compose
   ```
 <br/>
-<br/>
 
 #### Docker FYI:
 
@@ -29,7 +28,7 @@ sudo systemctl disable docker.service
 sudo systemctl disable containerd.service
 ```
 
-<br/>
+
 <br/>
 
 * Run:
