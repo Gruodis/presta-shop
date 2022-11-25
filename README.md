@@ -15,18 +15,18 @@
   ```
 <br/>
 
-#### Docker FYI:
+- #### Docker FYI:
 
-Configure Docker to start on boot with systemd
-```bash
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
-```
-To stop this behavior, use disable instead.
-```bash
-sudo systemctl disable docker.service
-sudo systemctl disable containerd.service
-```
+  Configure Docker to start on boot with systemd
+  ```bash
+  sudo systemctl enable docker.service
+  sudo systemctl enable containerd.service
+  ```
+  To stop this behavior, use disable instead.
+  ```bash
+  sudo systemctl disable docker.service
+  sudo systemctl disable containerd.service
+  ```
 
 
 <br/>
