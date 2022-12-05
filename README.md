@@ -83,33 +83,38 @@
     ```
   -  :heavy_check_mark: einame į projekto dir **"../cache/"** ir patikriname folderio **"../smarty"** permission:
     
-
-
-
+<br>
+<br>
 
 ## Pakartotiniam projekto paleidimui:
 
 - ```bash
   sudo docker-compose up
   ```
-## Jau startuoto projekto atnaujinimui as folows:
+  
+<br>
+<br>
 
-  ```bash
-  sudo docker-compose down
-  ```
+# :red_circle: Jau startuoto projekto atnaujinimui as folows:
+
+:interrobang: Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b>
+
+```bash
+sudo docker-compose down
+```
 - Atsinaujiname branch'ą, tuomet:
 
-  ```bash
-  sudo docker-compose up --build -d --force-recreate
-  ```
+```bash
+sudo docker-compose up --build -d --force-recreate
+```
+  
+<br>
+<br>
 
-
-
-### Naujai ir pakartotinai paleidus projektą ištrinti <b>admin</b> ir <b>install</b>
 
 # :interrobang: Error'ai ir sprendimai:
 
-- :red_circle: Jeigu bandant paleist dockeri gauname ***permission*** error'ą:
+- Jeigu bandant paleist dockeri gauname ***permission*** error'ą:
 
 - First try this command and reboot system:
   ```bash
@@ -122,7 +127,8 @@
   ```
   and then ``docker-compose up``
 
-
+<br>
+<br>
 
 #### Jiegu neatidaro nuoroų:
 <ol>
@@ -146,6 +152,8 @@ if (!defined('_PS_MODE_DEV_')) {
 define('_PS_DISPLAY_COMPATIBILITY_WARNING_', false);
 if (_PS_MODE_DEV_ === false) {
 ```
+<br>
+
 ### Fix missing images, open phpMyAdmin -> prestashop table -> sql:
 ```bash
 TRUNCATE prestashop.ps_image;
@@ -153,7 +161,6 @@ TRUNCATE prestashop.ps_image_lang;
 TRUNCATE prestashop.ps_image_shop;
 ```
 <hr/>
-
 
 https://codepen.io/devam-soni/pen/PoqaKWm
 
