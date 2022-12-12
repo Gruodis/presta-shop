@@ -6,9 +6,16 @@
 <br/>
 <br/>
 
+
+<p align="center"><img width="150" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/43164261/207134539-134dfea4-35c3-47f4-a1f4-2977e4631e3e.svg"></p>
+
 ## Naujam projekto paleidimui
 
--  jeigu nėra instaliuota docker-composer, patikrinimui ```docker -v docker-composer -v```
+Check if docker/compose installed:
+
+- ```bash
+  docker -v docker-composer -v
+  ```
 
 - ```bash
   sudo apt-get install docker-compose
