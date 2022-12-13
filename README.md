@@ -61,36 +61,37 @@ Docker should now be installed, the daemon started, and the process enabled to s
 
 - #### Docker FYI:
 
-  List docker container:
+List docker container:
   ```bash
   sudo docker container ls -a
   ```
 
-  Remove container
+Remove container
   
   ```bash
   docker container rm 
   ```
   
-  The docker system prune command removes all stopped containers, dangling images, and unused networks:
+The docker system prune command removes all stopped containers, dangling images, and unused networks:
   
   ``bash
   docker system prune
   ```
-  > If you want to remove all unused images not just the dangling ones, add the -a (--all) option to the command:
+> If you want to remove all unused images not just the dangling ones, add the -a (--all) option to the command:
+
   ```bash
   docker system prune -a
   ```
   
   
-  Configure Docker to start on boot with systemd:
+Configure Docker to start on boot with systemd:
   
   ```bash
   sudo systemctl enable docker.service
   sudo systemctl enable containerd.service
   ```
   
-  To stop this behavior, use disable instead:
+To stop this behavior, use disable instead:
   
   ```bash
   sudo systemctl disable docker.service
