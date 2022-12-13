@@ -7,29 +7,91 @@
 <br/>
 
 
-<p align="center"><img width="150" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/43164261/207134539-134dfea4-35c3-47f4-a1f4-2977e4631e3e.svg"></p>
+## First run
 
-## Naujam projekto paleidimui
+
+<p align="center"><img width="250" alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/43164261/207134539-134dfea4-35c3-47f4-a1f4-2977e4631e3e.svg"></p>
 
 Check if docker/compose installed:
 
 - ```bash
   docker -v docker-composer -v
   ```
+  
+Update your existing packages:
 
 - ```bash
-  sudo apt-get install docker-compose
+  sudo apt update
   ```
+  
+Install a prerequisite packages which let apt utilize HTTPS:
+
+- ```bash  
+  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  ```
+  
+Install docker
+
+- ```bash
+  sudo apt install docker-compose
+  ```
+Docker should now be installed, the daemon started, and the process enabled to start on boot. To verify:
+
+- ```bash
+  sudo systemctl status docker
+  ```
+  
+<br/>
+
+> NOTE: To avoid using sudo for docker activities, add your username to the Docker Group:
+
+- ```bash
+  sudo usermod -aG docker ${USER}
+  ```
+  //  or try this:
+  
+  ```bash
+  sudo gpasswd -a $USER docker
+  newgrp docker
+  ```
+  :interrobang: DON'T forget to logout/login changes to take effect.
+  
+
 <br/>
 
 - #### Docker FYI:
 
-  Configure Docker to start on boot with systemd
+  List docker container:
+  ```bash
+  sudo docker container ls -a
+  ```
+
+  Remove container
+  
+  ```bash
+  docker container rm 
+  ```
+  
+  The docker system prune command removes all stopped containers, dangling images, and unused networks:
+  
+  ``bash
+  docker system prune
+  ```
+  > If you want to remove all unused images not just the dangling ones, add the -a (--all) option to the command:
+  ```bash
+  docker system prune -a
+  ```
+  
+  
+  Configure Docker to start on boot with systemd:
+  
   ```bash
   sudo systemctl enable docker.service
   sudo systemctl enable containerd.service
   ```
-  To stop this behavior, use disable instead.
+  
+  To stop this behavior, use disable instead:
+  
   ```bash
   sudo systemctl disable docker.service
   sudo systemctl disable containerd.service
